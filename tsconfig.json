@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "ES6",
+    "moduleResolution": "bundler",
+    "rootDir": "./SocialHub",
+    "outDir": "./dist",
+    "allowJs": true,
+    "strict": true,
+    "sourceMap": true,
+    "skipLibCheck": true
+  },
+  "exclude": [
+    "dist",
+    "SocialHub/node_modules"
+  ]
+}
