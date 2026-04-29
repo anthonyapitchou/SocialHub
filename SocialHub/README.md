@@ -59,3 +59,9 @@ Anthony Apicella
 
 - GitHub: https://github.com/anthonyapitchou
 - LinkedIn: https://www.linkedin.com/in/anthonyapicella-designer-programmer/
+
+Today I completed the register and login functionality using JavaScript and the Noroff API.
+
+I also created the Home page, my own profile page, and another user profile page.
+
+Finally, I fixed a Git issue and restored the normal push workflow to GitHub.
