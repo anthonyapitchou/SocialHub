@@ -1,0 +1,201 @@
+.register-page {
+    min-height: 100vh;
+    background: #f0f2f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.register-container {
+    width: 100%;
+    max-width: 1400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+/* LEFT SIDE */
+
+.register-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.register-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 500px;
+}
+
+.register-logo {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+
+.brand-text {
+    font-size: 32px;
+    line-height: 1.4;
+    color: #1c1e21;
+    max-width: 420px;
+    margin-top: auto;
+}
+
+.brand-image img,
+.register-image {
+    width: 100%;
+    max-width: 420px;
+    height: 520px;
+    border-radius: 24px;
+    object-fit: cover;
+}
+
+/* RIGHT SIDE */
+
+.register-right {
+    display: flex;
+    justify-content: center;
+}
+
+.register-card {
+    width: 100%;
+    max-width: 460px;
+    background: white;
+    border-radius: 20px;
+    padding: 32px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.profile-preview {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 16px;
+}
+
+.profile-preview h2 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.profile-preview p {
+    color: #65676b;
+}
+
+/* FORM */
+
+#register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#register-form input {
+    height: 56px;
+    border: 1px solid #dddfe2;
+    border-radius: 12px;
+    padding: 0 18px;
+    font-size: 16px;
+    outline: none;
+}
+
+#register-form input:focus {
+    border-color: #1877f2;
+}
+
+.btn-register-main {
+    height: 54px;
+    border: none;
+    border-radius: 12px;
+    background: #1877f2;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.btn-register-main:hover {
+    background: #1877f2;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(66, 183, 42, 0.25);
+}
+
+.forgot-password {
+    text-align: center;
+    text-decoration: none;
+    color: #1877f2;
+    font-size: 14px;
+}
+
+.forgot-password:hover {
+    color: #0f5fd6;
+    text-decoration: underline;
+}
+
+
+
+.divider {
+    height: 1px;
+    background: #dadde1;
+}
+
+.button-login {
+    height: 52px;
+    border: none;
+    border-radius: 12px;
+    background: #42b72a;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.button-login:hover {
+    background: #36a420;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(66, 183, 42, 0.25);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 992px) {
+    .register-container {
+        grid-template-columns: 1fr;
+    }
+
+    .register-left {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .register-content {
+        min-height: auto;
+        align-items: center;
+    }
+
+    .brand-text {
+        font-size: 24px;
+        margin-top: 20px;
+    }
+
+    .brand-image img,
+    .login-image {
+        height: auto;
+    }
+}

@@ -1,0 +1,126 @@
+/* ── NAVBAR ───────────────────────────────────────────── */
+#navbar {
+  background: #262829;
+  border-bottom: 1px solid #dbdbdb;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+img.logo {
+  margin-right: 8px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+img.logo:hover {
+  transform: scale(1.08);
+  border-color: #bfc3c5;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  opacity: 0.95;
+}
+
+.navbar-search {
+  display: flex;
+  align-items: center;
+  background: #fafafa;
+  border: 1px solid #dbdbdb;
+  border-radius: 20px;
+  padding: 6px 14px;
+  width: 220px;
+}
+
+.navbar-search input {
+  border: none;
+  background: transparent;
+  font-size: 13px;
+  color: #262626;
+  outline: none;
+  width: 100%;
+}
+
+.navbar-search input::placeholder {
+  color: #8e8e8e;
+}
+
+
+.btn-new-post {
+  padding: 7px 14px;
+  background: #262626;
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn-new-post:hover {
+  opacity: 0.85;
+}
+
+.btn-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 600;
+  color: #262626;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn-icon:hover {
+  background: #efefef;
+}
+
+.btn-logout {
+  padding: 7px 14px;
+  background: transparent;
+  color: #8e8e8e;
+  border: 1px solid #dbdbdb;
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.btn-logout:hover {
+  color: #262626;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.profile-avatar,
+.notification-avatar,
+.message-avatar,
+.home-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #dbdbdb;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.profile-avatar:hover,
+.notification-avatar:hover,
+.message-avatar:hover,
+.home-avatar:hover {
+  transform: scale(1.08);
+  border-color: #bfc3c5;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  opacity: 0.95;
+}
