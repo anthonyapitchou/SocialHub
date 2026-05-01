@@ -1,11 +1,11 @@
 import { renderNavbar } from "../components/navbar.js";
 
 export default function profile() {
-    renderNavbar()
+  renderNavbar()
 
-    const app = document.getElementById("app");
+  const app = document.getElementById("app");
 
-    app.innerHTML = `
+  app.innerHTML = `
     <section class="profile-page">
   <div class="profile-container">
 
@@ -53,8 +53,7 @@ export default function profile() {
         <img
           src="./assets/images/beach.jpg"
           alt="Post 1"
-          class="profile-post-image"
-        />
+          class="profile-post-image"/>
       </div>
 
       <div class="profile-post-card">

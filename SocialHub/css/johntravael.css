@@ -49,19 +49,17 @@
     font-weight: 700;
 }
 
-.button.follow-btn {
-    border: none;
-    background: #1877f2;
-    color: white;
+.follow-btn {
+    background: #1877f2 !important;
+    color: white !important;
     padding: 12px 24px;
     border-radius: 14px;
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
-    transition: 0.2s;
 }
 
-.button.follow-btn:hover {
+.follow-btn:hover {
     opacity: 0.9;
 }
 
@@ -112,31 +110,6 @@
 
 /* RESPONSIVE */
 
-@media (max-width: 992px) {
-    .profile-header {
-        flex-direction: column;
-        text-align: center;
-        gap: 32px;
-    }
-
-    .profile-top {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .profile-stats {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .profile-bio p {
-        margin: 0 auto;
-    }
-
-    .profile-posts-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 
 @media (max-width: 768px) {
     .profile-page {

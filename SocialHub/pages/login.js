@@ -111,18 +111,22 @@ export default async function login() {
       })
     });
 
+
+
     const data = await response.json();
 
+
+    console.log("EMAIL:", emailValue);
+    console.log("PASSWORD:", passwordValue);
+    console.log("STATUS:", response.status);
+    console.log("DATA:", data);
+
     if (!response.ok) {
-      console.log(data);
       alert(data.errors?.[0]?.message || "Login failed");
       return;
     }
+
     localStorage.setItem("token", data.data.accessToken);
-
     window.location.hash = "#/home";
-
-    console.log(data);
-
   });
 }

@@ -1,11 +1,11 @@
 import { renderNavbar } from "../components/navbar.js";
 
 export default function johntravel() {
-    renderNavbar();
+  renderNavbar();
 
-    const app = document.getElementById("app");
+  const app = document.getElementById("app");
 
-    app.innerHTML = `
+  app.innerHTML = `
 
         
     <section class="profile-page">
@@ -25,11 +25,9 @@ export default function johntravel() {
 
         <div class="profile-top">
           <h1>johntravels</h1>
-
-          <button class="follow-btn">
-            Follow
-          </button>
-        </div>
+          
+          <button class="follow-btn"> Follow </button>       
+           </div>
 
         <div class="profile-stats">
           <span><strong>48</strong> posts</span>
@@ -53,7 +51,7 @@ export default function johntravel() {
 
       <div class="profile-post-card">
         <img
-          src="./assets/images/post-1.jpg"
+          src="./assets/images/boat.jpg"
           alt="Travel Post 1"
           class="profile-post-image"
         />
@@ -61,7 +59,7 @@ export default function johntravel() {
 
       <div class="profile-post-card">
         <img
-          src="./assets/images/post-2.jpg"
+          src="./assets/images/plage.jpg"
           alt="Travel Post 2"
           class="profile-post-image"
         />
@@ -69,7 +67,7 @@ export default function johntravel() {
 
       <div class="profile-post-card">
         <img
-          src="./assets/images/post-3.jpg"
+          src="./assets/images/restaurant.jpg"
           alt="Travel Post 3"
           class="profile-post-image"
         />
@@ -77,7 +75,7 @@ export default function johntravel() {
 
       <div class="profile-post-card">
         <img
-          src="./assets/images/post-4.jpg"
+          src="./assets/images/painauchocolat.jpg"
           alt="Travel Post 4"
           class="profile-post-image"
         />
@@ -85,7 +83,7 @@ export default function johntravel() {
 
       <div class="profile-post-card">
         <img
-          src="./assets/images/post-5.jpg"
+          src="./assets/images/car.jpg"
           alt="Travel Post 5"
           class="profile-post-image"
         />
@@ -93,7 +91,7 @@ export default function johntravel() {
 
       <div class="profile-post-card">
         <img
-          src="./assets/images/post-6.jpg"
+          src="./assets/images/skiing.jpg"
           alt="Travel Post 6"
           class="profile-post-image"
         />

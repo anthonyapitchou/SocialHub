@@ -1,11 +1,11 @@
 import { renderNavbar } from "../components/navbar.js";
 
-export default function home() {
+export default async function home() {
     renderNavbar();
 
-    const app = document.getElementById("app");
+  const app = document.getElementById("app");
 
-    app.innerHTML = `;
+  app.innerHTML = `
 <section class="home-page">
   <div class="home-container">
 
@@ -35,70 +35,7 @@ export default function home() {
 
     <main class="main-feed">
 
-      <article class="post-card">
-
-        <div class="post-header">
-          <img
-            src="./assets/images/john.jpg"
-            alt="User Avatar"
-            class="post-avatar">
-
-          <div class="post-user-info">
-          <a href="#/johntravel" class="post-user-info">
-  <h4>johntravels</h4>
-  <p>2 hours ago</p>
-</a>
-          </div>
-        </div>
-
-        <img
-          src="./assets/images/travel.jpg"
-          alt="Travel Post"
-          class="post-image"
-        />
-
-        <div class="post-content">
-          <p>
-            <strong>@johntravels</strong>
-            Sunset in Marseille 🌅
-          </p>
-
-          <span>1,284 likes</span>
-        </div>
-
-      </article>
-
-      <article class="post-card">
-
-        <div class="post-header">
-          <img
-            src="./assets/images/emma.jpg"
-            alt="User Avatar"
-            class="post-avatar"
-          />
-
-          <div class="post-user-info">
-            <h4>emma.design</h4>
-            <p>5 hours ago</p>
-          </div>
-        </div>
-
-        <img
-          src="./assets/images/coffee.jpg"
-          alt="Coffee Post"
-          class="post-image"
-        />
-
-        <div class="post-content">
-          <p>
-            <strong>@emma.design</strong>
-            Morning coffee vibes ☕
-          </p>
-
-          <span>892 likes</span>
-        </div>
-
-      </article>
+     
 
     </main>
 
@@ -108,15 +45,16 @@ export default function home() {
         <h3>Suggested for you</h3>
 
         <div class="suggestion-user">
-          <img
-            src="./assets/images/sophie.jpg"
+          <img src="./assets/images/sophie.jpg"
             alt="Suggestion"
             class="suggestion-avatar"
           />
 
           <div>
+          <a href="#/sophiecreates" class="suggestion-user-info">
             <h4>sophie.creates</h4>
             <p>Photography</p>
+          </a>
           </div>
 
           <button>Follow</button>
@@ -130,8 +68,10 @@ export default function home() {
           />
 
           <div>
+          <a href="#/michaelart" class="suggestion-user-info">
             <h4>michael.art</h4>
             <p>Digital Creator</p>
+          </a>
           </div>
 
           <button>Follow</button>

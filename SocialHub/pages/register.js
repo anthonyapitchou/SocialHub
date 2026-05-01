@@ -49,11 +49,7 @@ export default async function register() {
             placeholder="Full name"
             required />
 
-          <input
-            type="email"
-            id="email"
-            placeholder="Email address"
-            required />
+          <input type="email" id="email" placeholder="Email address" required />
 
           <input
             type="password"
@@ -65,13 +61,13 @@ export default async function register() {
             Register
           </button>
 
-          <a href="#/register" class="forgot-password">
+          <a href="#/login" class="forgot-password">
             Already have an account? Log in
           </a>
 
-<button type="submit" class="button-login" onclick="window.location.hash = '#/login'">
-            Log in
-          </button>
+          <button type="button" class="button-login" onclick="window.location.hash = '#/login'">
+  Log in
+</button>
 
 
         </form>
@@ -106,7 +102,11 @@ export default async function register() {
       return;
     }
 
-
+    console.log("SENT DATA:", {
+      name,
+      email,
+      password
+    });
 
     const response = await fetch("https://v2.api.noroff.dev/auth/register", {
       method: "POST",
@@ -124,17 +124,24 @@ export default async function register() {
 
     const data = await response.json();
 
-    console.log(data);
+    console.log("DATA:", data);
 
-    if (response.ok) {
-      console.log("Registration successful:", data);
-      alert("Registration successful! Please log in.");
-      window.location.hash = "#/login";
-    } else {
+    if (!response.ok) {
       console.log("Registration failed:", data);
-      alert(`Registration failed: ${data.message
-        }`);
+
+      const errorMessage =
+        data.errors?.[0]?.message ||
+        data.message ||
+        "Registration failed";
+
+      alert(errorMessage);
+      return;
     }
+
+    // SUCCÈS
+    console.log("Registration successful:", data);
+    alert("Registration successful! Please log in.");
+    window.location.hash = "#/login";
 
   });
 

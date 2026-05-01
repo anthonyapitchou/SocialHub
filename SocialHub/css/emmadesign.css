@@ -1,0 +1,87 @@
+.profile-page {
+    min-height: 100vh;
+    background: #f5f6f8;
+    padding: 40px 30px;
+}
+
+.profile-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* HEADER */
+
+.profile-header {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+    margin-bottom: 40px;
+}
+
+.profile-avatar-large {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-details {
+    flex: 1;
+}
+
+.profile-top {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.profile-top h1 {
+    font-size: 32px;
+}
+
+/* FOLLOW BUTTON */
+
+.follow-btn {
+    background: #1877f2;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 14px;
+    cursor: pointer;
+}
+
+/* GRID */
+
+.profile-posts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* 🔥 FIX FINAL (celui qui marche) */
+
+.profile-post-card {
+    height: 300px;
+    /* taille fixe */
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.profile-post-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    .profile-posts-grid {
+        grid-template-columns: 1fr;
+    }
+}
