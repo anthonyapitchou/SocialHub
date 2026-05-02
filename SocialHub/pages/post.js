@@ -1,8 +1,7 @@
 export default function post() {
+  const app = document.getElementById("app");
 
-    const app = document.getElementById("app");
-
-    app.innerHTML = `
+  app.innerHTML = `
   <section class="post-page">
     <div class="post-form-container">
 
@@ -16,45 +15,52 @@ export default function post() {
   </section>
   `;
 
-    const postForm = document.getElementById("post-form");
-    const titleInput = document.getElementById("title");
-    const bodyInput = document.getElementById("body");
+  const postForm = document.getElementById("post-form");
+  const titleInput = document.getElementById("title");
+  const bodyInput = document.getElementById("body");
+  const imageInput = document.getElementById("image");
 
-    postForm.addEventListener("submit", async (e) => {
-        e.preventDefault();
+  postForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-        const title = titleInput.value.trim();
-        const body = bodyInput.value.trim();
+    const title = titleInput.value.trim();
+    const body = bodyInput.value.trim();
+    const image = imageInput.value.trim();
 
-        if (!title) {
-            alert("Title is required");
-            return;
-        }
+    const token = localStorage.getItem("token");
+    const apiKey = localStorage.getItem("apiKey");
 
-        const token = localStorage.getItem("token");
+    try {
+      const response = await fetch("https://v2.api.noroff.dev/social/posts", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+          "X-Noroff-API-Key": apiKey,
+        },
+        body: JSON.stringify({
+          title: title || "Post", // 🔥 toujours présent
+          body: body || " ", // 🔥 évite body vide
+          media: image || undefined,
+        }),
+      });
 
-        const response = await fetch("https://v2.api.noroff.dev/social/posts", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                "Authorization": `Bearer ${token}`
-            },
-            body: JSON.stringify({
-                title,
-                body
-            })
-        });
+      const data = await response.json();
 
-        const data = await response.json();
+      if (!response.ok) {
+        console.log(data); // 🔥 pour debug
+        alert(data.errors?.[0]?.message || "Post failed");
+        return;
+      }
 
-        console.log("DATA:", data);
+      alert("Post created!");
+      postForm.reset();
 
-        if (!response.ok) {
-            alert(data.errors?.[0]?.message || "Post failed");
-            return;
-        }
-
-        alert("Post created!");
-        window.location.hash = "#/home";
-    });
+      // reload propre
+      window.location.hash = "#/home";
+    } catch (error) {
+      console.error(error);
+      alert("Something went wrong");
+    }
+  });
 }

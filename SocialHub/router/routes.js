@@ -7,20 +7,19 @@ import emmadesign from "../pages/emmadesign.js";
 import sophiecreates from "../pages/sophiecreates.js";
 import michaelart from "../pages/michaelart.js";
 import post from "../pages/post.js";
-
+import singlepost from "../pages/singlepost.js";
 
 const routes = {
-    "/login": login,
-    "/register": register,
-    "/home": home,
-    "/profile": profile,
-    "/johntravel": johntravel,
-    "/emmadesign": emmadesign,
-    "/sophiecreates": sophiecreates,
-    "/michaelart": michaelart,
-    "/post": post,
+  "/login": login,
+  "/register": register,
+  "/home": home,
+  "/profile": profile,
+  "/johntravel": johntravel,
+  "/emmadesign": emmadesign,
+  "/sophiecreates": sophiecreates,
+  "/michaelart": michaelart,
+  "/post": post,
+  "/singlepost": singlepost,
 };
 
-
 export default routes;
-

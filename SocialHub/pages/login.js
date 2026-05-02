@@ -75,8 +75,6 @@ export default async function login() {
   </section>
   `;
 
-
-
   const form = document.getElementById("login-form");
   const email = document.getElementById("email");
   const password = document.getElementById("password");
@@ -103,18 +101,15 @@ export default async function login() {
     const response = await fetch("https://v2.api.noroff.dev/auth/login", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
         email: emailValue,
-        password: passwordValue
-      })
+        password: passwordValue,
+      }),
     });
 
-
-
     const data = await response.json();
-
 
     console.log("EMAIL:", emailValue);
     console.log("PASSWORD:", passwordValue);
@@ -127,6 +122,7 @@ export default async function login() {
     }
 
     localStorage.setItem("token", data.data.accessToken);
+    localStorage.setItem("name", data.data.name); // ← ajoute ça
     window.location.hash = "#/home";
   });
 }
