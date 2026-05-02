@@ -1,3 +1,7 @@
+/**
+ * Renders a single post page fetched from the API.
+ * @returns {Promise<void>}
+ */
 export default async function singlepost() {
   const app = document.getElementById("app");
   const token = localStorage.getItem("token");

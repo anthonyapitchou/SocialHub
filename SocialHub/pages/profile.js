@@ -1,3 +1,7 @@
+/**
+ * Renders the profile page and loads user data from the API.
+ * @returns {Promise<void>}
+ */
 import { renderNavbar } from "../components/navbar.js";
 
 export default async function profile() {
